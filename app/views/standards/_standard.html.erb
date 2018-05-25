@@ -1,0 +1,70 @@
+<%= render 'errors/errors', obj: @standard %>
+
+<ul class="cd-hero-slider">
+    <li class="selected">
+            <div class="heading">
+              <h1>Inquire</h1>
+                <span>Message Me and I will be glad to answer your inquiries. Thank You</span>
+            </div>
+            <div class="cd-half-width fivth-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="content fivth-content">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="left-info">
+
+
+                            <p class="fa fa-commenting"> Viber: +63 917 301 3454 </p><br>
+                            <p class="fa fa-comments"> Skype: itcebu</p><br>
+                            <p class="fa fa-envelope"> Email: inquiry@denverworks.com</p>
+
+                            <ul class="social-icons">
+                              <i><a href="https://www.facebook.com/denver.aleta.71" target="_blank"><i class="fa fa-facebook"></i></a></i>
+                              <i><a href="https://twitter.com/bembemAleta" target="_blank"><i class="fa fa-twitter"></i></a></i>
+                              <i><a href="https://www.linkedin.com/in/denver-aleta-b72327161/" target="_blank"><i class="fa fa-linkedin"></i></a></i>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="row">
+
+                            <%= form_for @standard do |f| %>
+                                <div class="form-group">
+                                  <span  >WEBSITE PACKAGE:</span>  <b style="background-color: #ffffcc">STANDARD</b>
+
+                                </div>
+
+                                <div class="form-group">
+                                  <%= f.label :name," Name",class:"fa fa-user", aria: {hidden: true} %></i>
+                                  <%= f.text_field :name, class:"form-control", placeholder:"Enter Name", required:true %>
+                                </div>
+
+                                <div class="form-group">
+                                    <%= f.label :email," Email", class:"fa fa-envelope", aria: {hidden: true} %></i>
+                                    <%= f.email_field :email, class:"form-control", placeholder:"Enter Email", required:true %>
+                                </div>
+
+                               <div class="form-group">
+                                 <%= f.label :message," Message",class:"fa fa-comment", aria: {hidden: true} %></i>
+                                 <%= f.text_area :message, rows:3, placeholder:"Type your Message", required:true%>
+                               </div>
+
+                               <div class="form-group">
+                                 <%= f.submit "Get Free Quote &rarr;".html_safe, class:"btn btn-raised btn-block btn-success"%>
+                                </div>
+
+
+                              <% end %>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </li>
+</ul>
