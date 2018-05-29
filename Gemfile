@@ -6,8 +6,6 @@ git_source(:github) do |repo_name|
 
 end
 
-gem "mail_form", ">= 1.3.0"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
 # Use sqlite3 as the database for Active Record
