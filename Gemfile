@@ -6,11 +6,11 @@ git_source(:github) do |repo_name|
 
 end
 
-gem "mail_form", ">= 1.3.0"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7'
+#gem 'rails', '~> 5.0.7'
 # Use sqlite3 as the database for Active Record
+gem 'app_version', '~> 0.2.3'
+
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -45,6 +45,15 @@ gem "mail_form", ">= 1.3.0"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+end
+
+
+group :production do
+
+gem 'pg', '~> 0.11'
+
+gem 'rails_12factor'
+
 end
 
 group :development do
